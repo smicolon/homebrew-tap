@@ -27,7 +27,8 @@ class AiKit < Formula
   end
 
   def install
-    bin.install "ai-kit"
+    binary = Dir["ai-kit-*"].first
+    bin.install binary => "ai-kit"
   end
 
   test do
